@@ -55,7 +55,7 @@ async function login() {
 }
 
 function updateStatus() {
-  const currentStatus = ["/luck"];
+  const currentStatus = statusMessages[currentStatusIndex];
   const currentType = statusTypes[currentTypeIndex];
   client.user.setPresence({
     activities: [{ name: currentStatus, type: ActivityType.Custom }],
